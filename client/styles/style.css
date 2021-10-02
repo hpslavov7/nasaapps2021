@@ -1,0 +1,156 @@
+/* -------------------- common -------------------- */
+html,body{
+    margin:0;
+    padding:0;
+    height: 100vh
+}
+
+.monospace-font{
+    font-family: monospace;
+    font-size: 20px;
+}
+
+.gradient{
+    background: rgb(34,193,195);
+    background: linear-gradient(45deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+}
+
+.border{
+    border:1px solid black;
+    border-radius: 7px;
+}
+
+/* -------------------- header -------------------- */
+.header{
+    padding: 1vh;
+    position: fixed;
+    top: 0;
+    width:100%;
+    z-index: 9999;
+    cursor:pointer;
+}
+
+/* -------------------- content -------------------- */
+#content{
+    height: auto;
+    padding:25vh 0vh 0vh 0vh;
+}
+
+/* -------------------- tile content -------------------- */
+
+.home-tiles-container{
+    max-height: 14vh;
+}
+
+.low-scale-tiles-container{
+    top:0;
+    transform:translateY(-11vh);
+}
+
+.tile{
+    text-align:center;
+    display:inline-block;
+    margin-left:15vh;
+    box-shadow: 0px 5px 15px black;
+    min-height: 8vh;
+    min-width: 35vh;
+    padding: 5vh;
+    cursor: pointer;
+}
+
+.low-scale-tile{
+    transform:translate(0, -10vh) scale(0.4);
+}
+
+.high-scale-tile-text{
+    transform: scale(1.5);
+}
+
+.tile-text{
+    text-align: center;
+    margin-top: 5vh;
+}
+
+/* -------------------- content placeholder -------------------- */
+#contentPlaceholder{
+    display:none;
+    height: 100%;
+    width: 100%;
+}
+
+.map {
+    height: 85vh;
+    width: 100vw;
+    float:right;
+}
+
+
+.landslide-info{
+    float:left;
+}
+
+#searchLandSlide{
+    width: 15vw;
+    margin-left: 1vh;
+}
+
+/* -------------------- content placeholder form -------------------- */
+
+input, select {
+    width: 100%;
+    padding: 1vh;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  #reportLandSlide{
+      float: left;
+      margin-left: 1vh;
+      max-width: 50%;
+  }
+
+  .reportMap{
+    height: 58vh;
+    width: 45vw;
+    float:right;
+    margin: 6vh 0vh 0vh 0vh;
+
+  }
+
+  .formSegmentsMargin{
+      margin-top: 3vh;
+  }
+
+/* -------------------- footer -------------------- */
+/* .footer{
+
+} */
+
+
+
+
+/* ---------------report forms container ------------ */
+
+.report-tiles-container{
+    text-align: center;
+    padding:15vh;
+}
+
+.govFormContainer{
+    display:inline;
+}
+
+.govreportlandslidemap{
+    display:inline;
+    position:fixed;
+    padding: 1vh 0vh 0vh 4vh;
+}
+
+.govReportMap{
+    height: 65vh;
+    width: 45vw;
+    float:right;
+}
