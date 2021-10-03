@@ -12,7 +12,7 @@ namespace GeoSpace.Infrastructure
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"server=.;database=GEOSpaceDN;Trusted_Connection=true");
+            optionsBuilder.UseSqlServer(@"Data Source=tcp:rumennasa.database.windows.net,1433;Initial Catalog=API_db;User Id=rumen@rumennasa;Password=$Blink185");
         }
         public DbSet<ActiveRainFall> ActiveRainFalls { get; set; }
         public DbSet<ActiveEarthQuake> ActiveEarthQuakes { get; set; }

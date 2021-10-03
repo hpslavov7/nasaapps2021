@@ -77,7 +77,15 @@ namespace API.Controllers
                     ReportedBy = report.ReportedBy,
                     SlopeSteepness = report.SlopeSteepness,
                     Volume = report.Volume,
-                    Width = report.Width
+                    Width = report.Width,
+                    DistanceFromFaults=report.DistanceFromFaults,
+                    DistanceFromRivers=report.DistanceFromRivers,
+                     Elevation=report.Elevation,
+                     GeologyPermeability=report.GeologyPermeability,
+                      LandUse=report.LandUse,
+                       SlopeAngle=report.SlopeAngle,
+                       SlopeAspect=report.SlopeAspect
+                     
                 };
                GeneralRiskLevel risklevel = engine.CalculateLSRiskLeve(input, null, null);
                 landslide.GeneralRiskLevel = ((int)risklevel);

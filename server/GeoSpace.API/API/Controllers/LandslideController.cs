@@ -28,7 +28,6 @@ namespace API.Controllers
         {
             Engine engine = new Engine();
             DbContextOptions<GeoSpaceContext> opt = new DbContextOptions<GeoSpaceContext>();
-            GeoSpaceContext geoSpaceContext = new GeoSpaceContext(opt);
             using (var db = new GeoSpaceContext(opt))
             {
                 var landslides = db.LandSlides.ToArray();
@@ -47,7 +46,9 @@ namespace API.Controllers
                     GeneralRiskLevel riskLevel = engine.CalculateLSRiskLeve(input,null,null);
                     landslide.GeneralRiskLevel = (int)riskLevel;
                 }
+                return landslides;
             }
+            
         }
     }
 }
