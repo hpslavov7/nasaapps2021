@@ -25,19 +25,19 @@ namespace API.Controllers
             _logger = logger;
         }
 
-        [HttpGet]
-        public IEnumerable<GovernmentReport> Get()
-        {
+        //[HttpGet]
+        //public IEnumerable<GovernmentReport> Get()
+        //{
 
-            return GovernmentReport.reports.ToArray();
-        }
+        //    return GovernmentReport.reports.ToArray();
+        //}
 
 
-        [HttpPost]
-        public ActionResult Post(GovernmentReport report)
-        {
-            GovernmentReport.reports.Add(report);
-            return StatusCode(201);
-        }
+        //[HttpPost]
+        //public ActionResult Post(GovernmentReport report)
+        //{
+        //    GovernmentReport.reports.Add(report);
+        //    return StatusCode(201);
+        //}
     }
 }

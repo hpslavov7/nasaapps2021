@@ -6,10 +6,10 @@ namespace GeoSpace.Infrastructure
 {
     public class GeoSpaceContext : DbContext
     {
-    //    public GeoSpaceContext(DbContextOptions<GeoSpaceContext> opt)
-    //: base(opt)
-    //    {
-    //    }
+        public GeoSpaceContext(DbContextOptions<GeoSpaceContext> opt)
+    : base(opt)
+        {
+        }
 
         public DbSet<ActiveRainFall> ActiveRainFalls { get; set; }
         public DbSet<ActiveEarthQuake> ActiveEarthQuakes { get; set; }

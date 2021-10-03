@@ -26,6 +26,5 @@ namespace API.Entities
         public string Damages { get; set; }
         public string Casualities { get; set; }
 
-        public static List<GovernmentReport> reports = new List<GovernmentReport>();
     }
 }

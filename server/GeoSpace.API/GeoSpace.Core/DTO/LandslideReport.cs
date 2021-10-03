@@ -14,6 +14,5 @@ namespace API.Entities
         public int ReporterContact { get; set; }
 
         public static List<LandslideReport> reports = new List<LandslideReport>();
-
     }
 }
