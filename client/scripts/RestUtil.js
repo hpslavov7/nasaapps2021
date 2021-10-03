@@ -1,12 +1,12 @@
 var RestUtil = {
     getLandslides: function (complete, error) {
-        this.executeRequest('GET', 'http://localhost:26252/landslide', {}, complete, error)
+        this.executeRequest('GET', 'https://api20211003142652.azurewebsites.net/landslide', {}, complete, error)
     },
     postSimpleReport: function (data, complete, error) {
-        this.executeRequest('POST', 'http://localhost:26252/landslideReport', data, complete, error);
+        this.executeRequest('POST', 'https://api20211003142652.azurewebsites.net/landslideReport', data, complete, error);
     },
     postGovernmentReport: function (data,complete, error) {
-        this.executeRequest('POST', 'http://localhost:26252/governmentReport', data, complete, error);
+        this.executeRequest('POST', 'https://api20211003142652.azurewebsites.net/governmentReport', data, complete, error);
     },
     postPrecipitationReport: function (complete, error, data) {
         this.executeRequest('POST', '', data, complete, error);
