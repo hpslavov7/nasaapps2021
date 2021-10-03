@@ -10,16 +10,16 @@ namespace API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class WeatherForecastController : ControllerBase
+    public class LandslideReportController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
-        private readonly ILogger<WeatherForecastController> _logger;
+        private readonly ILogger<LandslideReportController> _logger;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public LandslideReportController(ILogger<LandslideReportController> logger)
         {
             _logger = logger;
         }

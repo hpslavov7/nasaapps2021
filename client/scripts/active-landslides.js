@@ -7,8 +7,7 @@ $('#activeLandslide').on('click', function () {
 
 function dispatchContent(data) {
     contentPlaceHolder.css({ 'display': 'block' });
-    //parsing of json object from backend!
-    ElementConstructor.constructMap(contentPlaceHolder,[{},{},{}]);
+    ElementConstructor.constructMap(contentPlaceHolder,data);
     console.log(data.responseJSON);
 }
 
