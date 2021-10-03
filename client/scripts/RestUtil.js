@@ -5,8 +5,8 @@ var RestUtil = {
     postSimpleReport: function (data, complete, error) {
         this.executeRequest('POST', 'http://localhost:26252/landslideReport', data, complete, error);
     },
-    postGovernmentReport: function (complete, error, data) {
-        this.executeRequest('POST', '', data, complete, error);
+    postGovernmentReport: function (data,complete, error) {
+        this.executeRequest('POST', 'http://localhost:26252/governmentReport', data, complete, error);
     },
     postPrecipitationReport: function (complete, error, data) {
         this.executeRequest('POST', '', data, complete, error);

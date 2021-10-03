@@ -1,6 +1,8 @@
 ﻿using API.Entities;
+using GeoSpace.Infrastructure;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -35,7 +37,7 @@ namespace API.Controllers
         [HttpPost]
         public ActionResult Post(LandslideReport report)
         {
-            LandslideReport.reports.Add(report);
+            
             return StatusCode(201);
         }
     }

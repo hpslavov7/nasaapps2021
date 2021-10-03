@@ -106,11 +106,14 @@ var MapFactory = {
   },
 
   constructLandSlideData: function (data) {
-    var header = '<p>Landslide: ' + data.area + '</p>'
-    var landslideLongitude = '<p>Landslide longitute:</p><code>' + data.longitute + '</code>';
-    var landslideLatitude = '<p>Landslide latitude:</p><code>' + data.latitude + '</code>';
-    var severity = '<p>Severity Risk: ' + data.severity + '</p>'
-    var result = header + landslideLongitude + landslideLatitude + severity;
+    var header = '<p>Landslide area: ' + data.address + '</p>'
+    var date = '<p>Landslide area: ' + data.date + '</p>'
+    var landslideLongitude = '<p>Longitude:</p><code>' + data.longitudeCenter + '</code>';
+    var landslideLatitude = '<p>Latitude:</p><code>' + data.latitudeCenter + '</code>';
+    var steepness = '<p>Slope steepness:</p><code>' + data.slopeSteepness + '</code>';
+    var materialType = '<p>Last landslide material type:</p><code>' + data.landslideMaterialType + '</code>';
+    var riskLevel = '<p>General Risk level:</p><h3>' + data.generalRiskLevel + '</h3>';
+    var result = header + date + landslideLongitude + landslideLatitude + steepness + materialType + riskLevel;
     return result;
   },
 
@@ -125,12 +128,8 @@ var MapFactory = {
       var resultLandSlide = {};
       var currentLandslide = response[index];
 
-      resultLandSlide.latitude = currentLandslide.latitude;
-      resultLandSlide.longitute = currentLandslide.longitute;
-      resultLandSlide.area = currentLandslide.areaName;
-      resultLandSlide.severity = currentLandslide.severity;
-      resultLandSlide.date = currentLandslide.date;
-      resultLandSlide.marker = this.createMarker(currentLandslide.longitute, currentLandslide.latitude);
+      resultLandSlide = currentLandslide
+      resultLandSlide.marker = this.createMarker(resultLandSlide.longitudeCenter, resultLandSlide.latitudeCenter);
       resultLandSlide.marker.id = index;
       resultLandSlide.id = index;
 

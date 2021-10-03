@@ -26,6 +26,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\GeoSpace.Core\GeoSpace.Core.csproj" />
+    <ProjectReference Include="..\GeoSpace.Engine\GeoSpace.Engine.csproj" />
     <ProjectReference Include="..\GeoSpace.Infrastructure\GeoSpace.Infrastructure.csproj" />
   </ItemGroup>
 

@@ -65,7 +65,7 @@ function simpleReportSubmit(e) {
 function governmentReportSubmit(e) {
     e.preventDefault();
     var payload = parseForm('#governmentReport');
-    RestUtil.postSimpleReport(payload);
+    RestUtil.postGovernmentReport(payload);
 }
 
 
@@ -82,7 +82,8 @@ function parseForm(formId) {
 
 
     fields.each(function () {
-        if (this.name === 'latitude' || this.name === 'longitude' || this.name === 'reporterContact') {
+        if (this.name === 'LatitudeCenter' || this.name === 'LongitudeCenter' || this.name === 'Width' || this.name === 'Length'
+            || this.name === "Depth" || this.name === "SlopeSteepness" || this.name === "LinearMovement" || this.name === "Volume") {
             values[this.name] = parseFloat($(this).val());
         } else {
             values[this.name] = $(this).val();
