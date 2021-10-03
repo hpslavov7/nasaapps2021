@@ -1,6 +1,6 @@
 var MapFactory = {
 
-  createMap: function (container, longitude, latitude, markersData) {
+  createMap: function (container, markersData) {
     var overlay = this.createOverlay();
 
     var vectorLayer = new ol.layer.Vector({
@@ -30,7 +30,7 @@ var MapFactory = {
       ],
       overlays: [overlay],
       view: new ol.View({
-        center: ol.proj.fromLonLat([longitude, latitude]),
+        center: ol.proj.fromLonLat([24, 42]),
         zoom: 7
       })
     });
@@ -60,7 +60,16 @@ var MapFactory = {
   },
 
   mapMarkers: function (data) {
-    return [this.createMarker(25.68, 42.42), this.createMarker(27.68, 42.42), this.createMarker(23.68, 42.42)];
+    result = [];
+
+    for (var index = 0; index < data.length; index++) {
+      var lat = Math.random(30, 100);
+      var lon = Math.random(30, 100);
+      var marker = this.createMarker(lat, lon);
+      result.push(marker);
+    }
+
+    return result;
   },
 
   createOverlay: function () {

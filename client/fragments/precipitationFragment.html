@@ -1,15 +1,11 @@
 <div id="reportLandslideFragment" class="monospace-font">
 
-    <form id="reportLandSlide">
-        <div class="formSegmentsMargin">
-            <label for="picture">Upload Picture of landslide</label>
-            <input type="file" id="picture" name="picture" placeholder="Upload picture..">
-        </div>
+    <form action="" id="precipitationReport" class="reportFormAdvanced">
 
         <div class="formSegmentsMargin">
-            <label for="coordinates">Landslide Location Coordinates</label>
-            <input type="number" id="latitude" name="latitude" placeholder="Latitude of landslide area">
-            <input type="number" id="longitute" name="longitute" placeholder="Longitute of landslide area">
+            <label for="coordinates">Precipitation Location Coordinates</label>
+            <input type="number" id="latitude" name="coordinates" placeholder="Latitude of precipitation area">
+            <input type="number" id="longitute" name="coordinates" placeholder="Longitute of precipitation area">
             <button class="ui-button ui-widget ui-corner-all">Check Coordinates</button>
         </div>
 
@@ -32,11 +28,16 @@
         </div>
 
         <div>
-            <label for="phone">Reporter Phone</label>
-            <input type="text" id="phone" name="phone" placeholder="Your phone..">
+            <label for="names">Reporter Phone</label>
+            <input type="text" id="names" name="names" placeholder="Your phone..">
         </div>
 
-        <input type="submit" value="Submit" name="submitBtn" class="ui-button ui-widget ui-corner-all">
+        <div>
+            <label for="date">Date reported</label>
+            <input type="datetime-local" id="date" name="date" placeholder="Date reported">
+        </div>
+
+        <input type="submit" value="Submit" class="ui-button ui-widget ui-corner-all">
     </form>
 
 

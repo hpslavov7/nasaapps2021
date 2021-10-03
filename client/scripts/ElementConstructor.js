@@ -1,8 +1,8 @@
 var ElementConstructor = {
     data: ['Sofia', 'Varna', 'Burgas', 'Chirpan', 'StaraZagora'],
-    constructMap: function (contentContainer) {
+    constructMap: function (contentContainer,data) {
         this.constructContentStructure(contentContainer);
-        MapFactory.createMap('map', 25.68, 42.42);
+        MapFactory.createMap('map',data);
     },
 
     constructContentStructure: function (container) {

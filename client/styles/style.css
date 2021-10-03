@@ -136,21 +136,34 @@ input, select {
 
 .report-tiles-container{
     text-align: center;
-    padding:15vh;
+    padding:15vh 7vh 0vh 0vh;
 }
 
-.govFormContainer{
+.formContainer{
     display:inline;
 }
 
-.govreportlandslidemap{
+.reportFormMap{
     display:inline;
     position:fixed;
     padding: 1vh 0vh 0vh 4vh;
+    margin:0;
+}
+
+.precipitationReportMap{
+    display:inline;
+    position:fixed;
 }
 
 .govReportMap{
     height: 65vh;
     width: 45vw;
     float:right;
+}
+
+
+.reportFormAdvanced{
+    float: left;
+    margin-left: 1vh;
+    max-width: 50%;
 }

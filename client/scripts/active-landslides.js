@@ -1,14 +1,17 @@
 var contentPlaceHolder = $('#contentPlaceholder');
 $('#activeLandslide').on('click', function () {
     contentPlaceHolder.empty();
-    $.ajax('https://jsonplaceholder.typicode.com/todos', {
-        complete: dispatchContent
-    });
+    RestUtil.getLandslides(dispatchContent,handleError);
 });
 
 
 function dispatchContent(data) {
     contentPlaceHolder.css({ 'display': 'block' });
-    ElementConstructor.constructMap(contentPlaceHolder);
+    //parsing of json object from backend!
+    ElementConstructor.constructMap(contentPlaceHolder,[{},{},{}]);
     console.log(data.responseJSON);
+}
+
+function handleError(data) {
+    console.log(data);
 }
