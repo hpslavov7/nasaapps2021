@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GeoSpace.Infrastructure
+namespace GeoSpace.Core
 {
     public class Class1
     {
