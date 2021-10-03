@@ -9,6 +9,7 @@ namespace GeoSpace.Engine
         public SlopeAspect SlopeAspect { get; set; }
         public int Elevation { get; set; }
         public int DistanceFromRivers { get; set; }
+        public int DistanceFromFaults { get; set; }
         public LandUse LandUse { get; set; }
     }
 }

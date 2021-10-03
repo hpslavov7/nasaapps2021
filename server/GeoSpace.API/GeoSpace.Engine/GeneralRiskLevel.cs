@@ -6,10 +6,10 @@ namespace GeoSpace.Engine
 {
     public enum GeneralRiskLevel
     {
-        VeryHigh,
-        High,
-        Moderate,
-        Low,
-        VerLow,
+        VeryHigh=5,
+        High=4,
+        Moderate=3,
+        Low=2,
+        VerLow=1,
     }
 }

@@ -12,8 +12,6 @@ namespace GeoSpace.Engine
         BareRock,
         UrbanAreas,
         WaterAreas,
-        SouthWest,
-        West,
-        NorthWest
+  
     }
 }
