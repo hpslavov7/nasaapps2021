@@ -13,7 +13,7 @@ $('#reportLandslide').on('click', function () {
                 contentPlaceHolder.empty();
                 contentPlaceHolder.append(data);
                 MapFactory.createMap('reportLandslidemap', 25.68, 42.42);
-
+                $('#checkSimpleCoordinates').on('click', checkSimpleCoordinates);
                 $('#reportLandSlide').submit(simpleReportSubmit);
             })
         });
@@ -47,6 +47,13 @@ $('#reportLandslide').on('click', function () {
     })
 });
 
+function checkSimpleCoordinates(e) {
+    debugger;
+    e.preventDefault();
+    var latitude = $('#latitude').val();
+    var longitude = $('#longitude').val();
+    var map = $('#reportLandslidemap').data('map');
+}
 
 function simpleReportSubmit(e) {
     e.preventDefault();
@@ -70,12 +77,16 @@ function precipitationReportSubmit(e) {
 
 
 function parseForm(formId) {
-    debugger;
     var fields = $(formId + ' :input');
     var values = {};
 
+
     fields.each(function () {
-        values[this.name] = $(this).val();
+        if (this.name === 'latitude' || this.name === 'longitude' || this.name === 'reporterContact') {
+            values[this.name] = parseFloat($(this).val());
+        } else {
+            values[this.name] = $(this).val();
+        }
     });
 
     return values;
