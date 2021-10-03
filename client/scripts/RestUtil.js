@@ -1,6 +1,6 @@
 var RestUtil = {
     getLandslides: function (complete, error) {
-        this.executeRequest('GET', 'http://localhost:26252/weatherforecast', {}, complete, error)
+        this.executeRequest('GET', 'http://localhost:26252/landslide', {}, complete, error)
     },
     postSimpleReport: function (complete, error, data) {
         this.executeRequest('POST', '', data, complete, error);
