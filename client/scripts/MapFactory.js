@@ -63,6 +63,7 @@ var MapFactory = {
       return false;
     });
 
+    $('#' + container).data('map', map);
     return map;
   },
 
