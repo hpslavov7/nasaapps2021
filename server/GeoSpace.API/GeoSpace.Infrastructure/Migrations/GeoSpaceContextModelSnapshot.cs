@@ -86,8 +86,26 @@ namespace GeoSpace.Infrastructure.Migrations
                     b.Property<decimal>("Depth")
                         .HasColumnType("decimal(18,2)");
 
+                    b.Property<int>("DistanceFromFaults")
+                        .HasColumnType("int");
+
+                    b.Property<int>("DistanceFromRivers")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Elevation")
+                        .HasColumnType("int");
+
+                    b.Property<int>("GeneralRiskLevel")
+                        .HasColumnType("int");
+
+                    b.Property<int>("GeologyPermeability")
+                        .HasColumnType("int");
+
                     b.Property<string>("GovernmentId")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("LandUse")
+                        .HasColumnType("int");
 
                     b.Property<string>("LandslideForcesDetails")
                         .HasColumnType("nvarchar(max)");
@@ -115,6 +133,12 @@ namespace GeoSpace.Infrastructure.Migrations
 
                     b.Property<string>("ReportedBy")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<float>("SlopeAngle")
+                        .HasColumnType("real");
+
+                    b.Property<int>("SlopeAspect")
+                        .HasColumnType("int");
 
                     b.Property<decimal>("SlopeSteepness")
                         .HasColumnType("decimal(18,2)");

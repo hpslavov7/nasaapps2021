@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GeoSpace.Engine;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -30,5 +31,13 @@ namespace GeoSpace.Core.Entities
         public string ReportedBy { get; set; }
         public string Damages { get; set; }
         public string Casualities { get; set; }
+        public int GeneralRiskLevel { get; set; }
+        public float SlopeAngle { get; set; }
+        public GeneralRiskLevel GeologyPermeability { get; set; }
+        public SlopeAspect SlopeAspect { get; set; }
+        public int Elevation { get; set; }
+        public int DistanceFromRivers { get; set; }
+        public int DistanceFromFaults { get; set; }
+        public LandUse LandUse { get; set; }
     }
 }

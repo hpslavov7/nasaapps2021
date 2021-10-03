@@ -1,5 +1,9 @@
-﻿using Microsoft.AspNetCore.Cors;
+﻿using GeoSpace.Core.Entities;
+using GeoSpace.Engine;
+using GeoSpace.Infrastructure;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -22,20 +26,28 @@ namespace API.Controllers
         [HttpGet]
         public IEnumerable<Landslide> Get()
         {
-            var rng = new Random();
-            return Enumerable.Range(1, 120).Select(index =>
+            Engine engine = new Engine();
+            DbContextOptions<GeoSpaceContext> opt = new DbContextOptions<GeoSpaceContext>();
+            GeoSpaceContext geoSpaceContext = new GeoSpaceContext(opt);
+            using (var db = new GeoSpaceContext(opt))
             {
-                
-                return new Landslide
+                var landslides = db.LandSlides.ToArray();
+                foreach (var landslide in landslides)
                 {
-                    Date = DateTime.Now.AddDays(index),
-                    Latitude = rng.Next(-85, 85),
-                    Longitute = rng.Next(-175, 170),
-                    Severity = LandslideSeverity.High.ToString(),
-                    AreaName = "Landslide Area"
-            };
-            })
-            .ToList();
+                    LandslideInput input = new LandslideInput
+                    {
+                        DistanceFromFaults = landslide.DistanceFromFaults,
+                        DistanceFromRivers = landslide.DistanceFromRivers,
+                        Elevation = landslide.DistanceFromRivers,
+                        GeologyPermeability = landslide.GeologyPermeability,
+                        LandUse = landslide.LandUse,
+                        SlopeAngle = landslide.SlopeAngle,
+                        SlopeAspect = landslide.SlopeAspect
+                    };
+                    GeneralRiskLevel riskLevel = engine.CalculateLSRiskLeve(input,null,null);
+                    landslide.GeneralRiskLevel = (int)riskLevel;
+                }
+            }
         }
     }
 }

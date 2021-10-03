@@ -30,7 +30,11 @@ namespace GeoSpace.Engine
 
         private bool GetEartQuakeLevel(EarthQuakeInput input)
         {
-            return input.EpicentralDistanceKm < 10&& input.Magnitude >= 4;
+            if(input != null)
+            {
+                return input.EpicentralDistanceKm < 10&& input.Magnitude >= 4;
+            }
+            return false;
         }
 
         private GeneralRiskLevel GetClassicLevel(LandslideInput input)
