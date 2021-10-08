@@ -9,7 +9,7 @@
 - CSS 3
 - HTML 5
 
-### Third party software libraries:
+### Software/libraries used:
 1. Front end: 
     - JQuery
     - OpenLayers - [Map API](https://openlayers.org/)
