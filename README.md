@@ -18,7 +18,7 @@
 3. Database:
     - Microsoft Azure SQL Database
 
-### NASA PROJECT ASSIGNMENT - IDENTIFYING RISK WITH SCIENCE + COMMUNITIES
+### NASA PROJECT ASSIGNMENT - [IDENTIFYING RISK WITH SCIENCE + COMMUNITIES](https://2021.spaceappschallenge.org/challenges/statements/identifying-risk-with-science-communities/details)
 ### NASA PROJECT OVERVIEW - https://2021.spaceappschallenge.org/challenges/statements/identifying-risk-with-science-communities/teams/slide-another-day/project
 ### Project DEMO video - https://www.youtube.com/watch?v=XBG1bJ62mBE
 ### Project presentation - https://docs.google.com/presentation/d/1cvhUckV_f5i1Hzc0sxTZqIVtAPZAa0Qp/edit?usp=sharing&amp;ouid=108969284255834283662&amp;rtpof=true&amp;sd=true
