@@ -2,13 +2,14 @@
 ## NASA APPS 2021 - Landslide risk calculation application
 ### Final deployment - https://proud-cliff-032826003.azurestaticapps.net/
 
+## Implementation:
 ### Used languages:
 - .NET C#
 - JavaScript
 - CSS 3
 - HTML 5
 
-### Implementation & Third party libraries:
+### Third party software libraries:
 1. Front end: 
     - JQuery
     - OpenLayers - https://openlayers.org/
