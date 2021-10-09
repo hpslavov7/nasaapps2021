@@ -24,7 +24,7 @@
 ### Project DEMO video - [GeoSpace Demo](https://www.youtube.com/watch?v=XBG1bJ62mBE)
 ### Project presentation - [GeoSpace Presentation](https://docs.google.com/presentation/d/1cvhUckV_f5i1Hzc0sxTZqIVtAPZAa0Qp/edit?usp=sharing&amp;ouid=108969284255834283662&amp;rtpof=true&amp;sd=true)
 
-### Future plans for implementation changes:
+## Future plans for implementation changes:
 1. Back end:
     - To implement [Microservices](https://microservices.io/) architecture
 2. Front end:
