@@ -1,6 +1,7 @@
 # NASAAPPS2021
 ## Landslide risk calculation application
 ### Final deployment - [GeoSpace](https://proud-cliff-032826003.azurestaticapps.net/)
+### Official project video - [GeoSpace Video](https://www.youtube.com/watch?v=XBG1bJ62mBE)
 
 ## Implementation:
 ### Used languages:
